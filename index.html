@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shosin Labs - イノベーションを創造する</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; color: #333; }
+        
+        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        nav { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: white; text-decoration: none; transition: opacity 0.3s; }
+        .nav-links a:hover { opacity: 0.8; }
+        .menu-toggle { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+        
+        .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 6rem 20px; text-align: center; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.9; }
+        .btn { display: inline-block; padding: 0.8rem 2rem; background: white; color: #667eea; text-decoration: none; border-radius: 50px; font-weight: bold; transition: transform 0.3s; }
+        .btn:hover { transform: translateY(-2px); }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 20px; }
+        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #2d3748; }
+        
+        .services { background: #f7fafc; }
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .service-card { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s; }
+        .service-card:hover { transform: translateY(-5px); }
+        .service-card h3 { color: #667eea; margin-bottom: 1rem; }
+        
+        .about { background: white; }
+        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+        .about-text h2 { color: #2d3748; margin-bottom: 1rem; }
+        .about-image { height: 300px; border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+        
+        .contact { background: #2d3748; color: white; }
+        .contact-form { max-width: 600px; margin: 0 auto; }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; }
+        .form-group input, .form-group textarea { width: 100%; padding: 0.8rem; border: none; border-radius: 5px; font-family: inherit; }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+        .submit-btn { background: #667eea; color: white; border: none; padding: 1rem 3rem; border-radius: 50px; cursor: pointer; font-weight: bold; transition: background 0.3s; }
+        .submit-btn:hover { background: #5568d3; }
+        
+        footer { background: #1a202c; color: white; text-align: center; padding: 2rem 20px; }
+        
+        @media (max-width: 768px) {
+            .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #5568d3; padding: 1rem; }
+            .nav-links.active { display: flex; }
+            .menu-toggle { display: block; }
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            .about-content { grid-template-columns: 1fr; }
+            .section-title { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Shosin Labs</div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">ホーム</a></li>
+                <li><a href="#services">サービス</a></li>
+                <li><a href="#about">Shosin Labsについて</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>イノベーションを創造する</h1>
+        <p>最先端のテクノロジーでビジネスの未来を切り開きます</p>
+        <a href="#contact" class="btn">お問い合わせ</a>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">サービス</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>Webアプリケーション開発</h3>
+                    <p>モダンな技術スタックを使用した、スケーラブルで高性能なWebアプリケーションを開発します。</p>
+                </div>
+                <div class="service-card">
+                    <h3>クラウドソリューション</h3>
+                    <p>AWS、Azure、GCPなど主要クラウドプラットフォームでのインフラ構築と運用をサポートします。</p>
+                </div>
+                <div class="service-card">
+                    <h3>モバイルアプリ開発</h3>
+                    <p>iOS、Android向けのネイティブアプリケーション開発で、優れたユーザー体験を提供します。</p>
+                </div>
+                <div class="service-card">
+                    <h3>AIソリューション</h3>
+                    <p>機械学習とAI技術を活用し、ビジネスの自動化と最適化を実現します。</p>
+                </div>
+                <div class="service-card">
+                    <h3>システムコンサルティング</h3>
+                    <p>技術戦略の立案から実装まで、包括的なコンサルティングサービスを提供します。</p>
+                </div>
+                <div class="service-card">
+                    <h3>保守・運用サポート</h3>
+                    <p>24時間365日の監視体制で、システムの安定稼働をサポートします。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title" style="text-align: left;">Shosin Labsについて</h2>
+                    <p>Shosin Labsは、最先端のテクノロジーとクリエイティビティを融合させ、お客様のビジネス課題を解決するソリューションを提供するビジネス・テクノロジーチームです。</p>
+                    <p style="margin-top: 1rem;">私たちは「初心」を忘れず、常に学び続け、革新的なサービスを創造することを使命としています。</p>
+                    <p style="margin-top: 1rem;"><strong>拠点:</strong> 関東<br>
+                    <strong>専門分野:</strong> ソフトウェア開発、クラウドサービス、技術コンサルティング</p>
+                </div>
+                <div class="about-image">
+                    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="400" height="300" fill="#f7fafc"/>
+                        <circle cx="200" cy="150" r="100" fill="none" stroke="url(#grad1)" stroke-width="3" opacity="0.3"/>
+                        <circle cx="200" cy="150" r="70" fill="none" stroke="url(#grad1)" stroke-width="3" opacity="0.5"/>
+                        <circle cx="200" cy="150" r="40" fill="url(#grad1)" opacity="0.7"/>
+                        <line x1="200" y1="50" x2="200" y2="250" stroke="#667eea" stroke-width="2" opacity="0.4"/>
+                        <line x1="100" y1="150" x2="300" y2="150" stroke="#764ba2" stroke-width="2" opacity="0.4"/>
+                        <circle cx="200" cy="50" r="8" fill="#667eea"/>
+                        <circle cx="200" cy="250" r="8" fill="#667eea"/>
+                        <circle cx="100" cy="150" r="8" fill="#764ba2"/>
+                        <circle cx="300" cy="150" r="8" fill="#764ba2"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">お問い合わせ</h2>
+            <div style="text-align: center;">
+                <p style="margin-bottom: 2rem; font-size: 1.1rem;">お気軽にお問い合わせください</p>
+                <a href="https://forms.gle/HLBmAwocqanbtbnn6" target="_blank" class="btn">お問い合わせフォームへ</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p><a href="privacy.html" style="color: #667eea; text-decoration: none;">プライバシーポリシー</a></p>
+        <p style="margin-top: 0.5rem;">&copy; 2025 Shosin Labs. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    document.getElementById('navLinks').classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
