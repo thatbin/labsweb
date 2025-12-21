@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クラウドネイティブ開発体制を強化 - Shosin Labs</title>
+    <meta name="description" content="Shosin Labsはマルチクラウド案件に対応する専門チームを拡充し、Kubernetesを軸にしたリファレンスアーキテクチャとSRE運用メニューを提供します。">
+    <link rel="canonical" href="https://www.shosin-labs.com/news-cloud-team.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="クラウドネイティブ開発体制を強化 - Shosin Labs">
+    <meta property="og:description" content="SRE・セキュリティ人材を中心としたクラウドネイティブ専門チームを拡充しました。">
+    <meta property="og:url" content="https://www.shosin-labs.com/news-cloud-team.html">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.8; color: #2d3748; }
+        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        nav { max-width: 1100px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; }
+        .logo a { color: white; text-decoration: none; }
+        .menu-toggle { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: white; text-decoration: none; transition: opacity 0.3s; }
+        .nav-links a:hover { opacity: 0.8; }
+        .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 3rem 20px; }
+        .hero h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .meta { color: #e2e8f0; font-size: 0.95rem; }
+        .container { max-width: 900px; margin: 0 auto; padding: 3rem 20px; background: white; }
+        .breadcrumbs { font-size: 0.9rem; margin-bottom: 1rem; color: #4a5568; }
+        .breadcrumbs a { color: #667eea; text-decoration: none; }
+        h2 { color: #2d3748; font-size: 1.3rem; margin-top: 2rem; margin-bottom: 0.75rem; }
+        p { margin-bottom: 1rem; color: #4a5568; }
+        ul { margin: 0 0 1rem 1.5rem; color: #4a5568; }
+        .tag { display: inline-block; padding: 0.25rem 0.75rem; background: #ebf4ff; color: #4c51bf; border-radius: 999px; font-size: 0.85rem; margin-right: 0.5rem; }
+        footer { background: #1a202c; color: white; text-align: center; padding: 2rem 20px; }
+        footer a { color: #667eea; text-decoration: none; }
+        @media (max-width: 768px) {
+            .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #5568d3; padding: 1rem; }
+            .nav-links.active { display: flex; }
+            .menu-toggle { display: block; }
+            .hero h1 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">Shosin Labs</a></div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#home">ホーム</a></li>
+                <li><a href="news.html">ニュース</a></li>
+                <li><a href="index.html#services">サービス</a></li>
+                <li><a href="index.html#contact">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <p class="breadcrumbs"><a href="news.html">ニュース</a> / クラウドネイティブ開発体制を強化</p>
+        <h1>クラウドネイティブ開発体制を強化</h1>
+        <div class="meta">公開日: 2025年1月30日</div>
+        <div style="margin-top: 0.75rem;">
+            <span class="tag">クラウド</span><span class="tag">SRE</span><span class="tag">セキュリティ</span>
+        </div>
+    </section>
+
+    <main class="container">
+        <p>Shosin Labsは、マルチクラウド案件の増加に伴い、クラウドネイティブ開発・運用体制を強化しました。SREとセキュリティを両軸に、可用性とコンプライアンスを両立するサポートを提供します。</p>
+
+        <h2>強化ポイント</h2>
+        <ul>
+            <li>AWS・Azure・GCPに対応したセキュリティベースラインの標準化</li>
+            <li>Kubernetesを軸にしたマルチクラスタ運用とコスト最適化の仕組みづくり</li>
+            <li>Observabilityスタック（Prometheus / OpenTelemetry / Grafana）のテンプレート化</li>
+            <li>インシデントレスポンスを考慮したIaCとランブックの整備</li>
+        </ul>
+
+        <h2>提供するメニュー</h2>
+        <p>クラウドネイティブ導入から運用まで、以下のメニューを提供します。</p>
+        <ul>
+            <li>リファレンスアーキテクチャの提供とプロジェクト初期設計のワークショップ</li>
+            <li>CI/CD、セキュリティスキャン、ガードレールを組み込んだDevSecOpsセットアップ</li>
+            <li>SLI/SLO策定とアラート最適化を含むSRE運用設計</li>
+            <li>年2回のセキュリティレビューとBCP観点のフェイルオーバーテスト支援</li>
+        </ul>
+
+        <p>詳細なサービス内容や共同検証のご相談は、以下のフォームからお問い合わせください。</p>
+        <p><a href="index.html#contact" style="color: #667eea; font-weight: bold;">お問い合わせフォームはこちら →</a></p>
+    </main>
+
+    <footer>
+        <p><a href="news.html">ニュース一覧へ戻る</a> / <a href="index.html">ホーム</a></p>
+        <p style="margin-top: 0.5rem;">&copy; 2025 Shosin Labs. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "headline": "クラウドネイティブ開発体制を強化",
+        "datePublished": "2025-01-30",
+        "dateModified": "2025-01-30",
+        "author": {
+            "@type": "Organization",
+            "name": "Shosin Labs"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Shosin Labs"
+        },
+        "description": "Shosin Labsはマルチクラウド案件に対応する専門チームを拡充し、Kubernetesを軸にしたリファレンスアーキテクチャとSRE運用メニューを提供します。",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.shosin-labs.com/news-cloud-team.html"
+        }
+    }
+    </script>
+</body>
+</html>
