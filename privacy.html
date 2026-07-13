@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>プライバシーポリシー - Shosin Labs</title>
+    <title>プライバシーポリシー / Privacy Policy - Shosin Labs</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.8; color: #333; }
@@ -12,12 +12,19 @@
         .logo { font-size: 1.5rem; font-weight: bold; }
         .logo a { color: white; text-decoration: none; }
         .container { max-width: 800px; margin: 0 auto; padding: 3rem 20px; }
-        h1 { font-size: 2.5rem; margin-bottom: 2rem; color: #2d3748; }
-        h2 { font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; color: #667eea; }
+        h1 { font-size: 2.2rem; margin-bottom: 0.5rem; color: #2d3748; }
+        .updated { color: #718096; margin-bottom: 1.5rem; }
+        h2 { font-size: 1.4rem; margin-top: 2rem; margin-bottom: 1rem; color: #667eea; }
         p { margin-bottom: 1rem; }
         ul { margin-left: 1.5rem; margin-bottom: 1rem; }
         ul li { margin-bottom: 0.5rem; }
         a { color: #667eea; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 1rem; font-size: 0.95rem; }
+        th, td { border: 1px solid #e2e8f0; padding: 0.6rem 0.8rem; text-align: left; vertical-align: top; }
+        th { background: #f7fafc; }
+        .callout { background: #f7fafc; border-left: 4px solid #667eea; padding: 1rem 1.2rem; margin-bottom: 1.5rem; }
+        .langswitch { margin-bottom: 2rem; font-size: 0.95rem; }
+        .divider { border: 0; border-top: 2px solid #e2e8f0; margin: 3.5rem 0; }
         footer { background: #1a202c; color: white; text-align: center; padding: 2rem 20px; margin-top: 3rem; }
         footer a { color: #667eea; text-decoration: none; }
     </style>
@@ -31,70 +38,149 @@
 
     <div class="container">
         <h1>プライバシーポリシー</h1>
+        <p class="updated">最終更新日: 2026年7月13日</p>
+        <p class="langswitch"><a href="#english">English version below ↓</a></p>
 
-        <h2>お客様から取得する情報</h2>
-        <p>当社は、お客様から以下の情報を取得します。</p>
+        <div class="callout">
+            <p><strong>要点。</strong> Murmur は録音と文字起こしを<strong>お客様の端末内だけ</strong>で行います。録音データとその文字起こしが当社に送信されることはなく、当社がそれらを読むことはできません。当社が取得するのは匿名の利用状況と不具合情報のみで、そこにお客様の音声や発言内容が含まれることはありません。Murmur に広告は一切なく、アカウント登録もありません。当社がお客様の個人情報を販売することもありません。</p>
+        </div>
+
+        <p>本ポリシーは、Shosin Labs(以下「当社」)が提供する当社ウェブサイトおよび <strong>Murmur</strong> アプリ(iOS / Android)における情報の取り扱いについて説明するものです。</p>
+
+        <h2>録音と文字起こしは端末から出ません</h2>
+        <p>Murmur は、最も機微な情報——お客様が実際に話した内容——が当社に届かないように設計されています。</p>
         <ul>
-            <li>氏名（ニックネームやペンネームも含む）</li>
-            <li>メールアドレス</li>
-            <li>Cookie（クッキー）を用いて生成された識別情報</li>
-            <li>OSが生成するID、端末の種類、端末識別子等のお客様が利用するOSや端末に関する情報</li>
-            <li>当社ウェブサイトの滞在時間、入力履歴等の当社ウェブサイトにおけるお客様の行動履歴</li>
-            <li>当社アプリの起動時間、入力履歴等の当社アプリの利用履歴</li>
+            <li><strong>録音</strong>:マイクは、お客様が録音を実行している間だけ使用されます。</li>
+            <li><strong>文字起こし</strong>:音声認識モデルはお客様の端末上でローカルに動作します。音声がサーバーに送信されることはありません。</li>
+            <li><strong>話者識別</strong>:話者を判別する処理、および同じ人物を録音をまたいで認識するための話者データの生成・保存は、すべて端末内で行われます。</li>
+            <li><strong>翻訳</strong>:文字起こしの翻訳も端末内で処理されます。</li>
+            <li><strong>保存</strong>:録音、文字起こし、話者データ、メモは、端末内のアプリ専用領域に保存されます。</li>
+        </ul>
+        <p>当社がお客様の録音や文字起こしを受け取ること、保存すること、閲覧することは一切ありません。</p>
+
+        <h2>当社が取得する情報</h2>
+        <p>Murmur には Google Firebase Analytics および Firebase Crashlytics が組み込まれており、アプリの利用状況の把握と不具合修正のために、限定的かつ匿名の技術情報を取得します。</p>
+        <table>
+            <tr><th>種類</th><th>例</th><th>目的</th></tr>
+            <tr><td>利用イベント</td><td>画面の表示、録音・文字起こし・書き出し・再生の実行、設定変更などの回数やタイミング</td><td>どの機能が使われているかの把握</td></tr>
+            <tr><td>アプリインスタンス識別子</td><td>Firebase がインストールごとに生成するランダムな識別子。広告 ID ではなく、アカウントに紐づくこともありません(そもそもアカウントがありません)</td><td>インストール数の集計</td></tr>
+            <tr><td>端末・アプリ情報</td><td>端末のモデル名・メーカー、OS バージョン、アプリのバージョン、言語設定、おおよそのメモリ容量帯(例:「4〜6GB」)、インストール済みモデル数</td><td>不具合の再現、対応端末の判断</td></tr>
+            <tr><td>クラッシュ情報</td><td>スタックトレース、クラッシュ時のアプリの状態</td><td>クラッシュの原因究明と修正</td></tr>
+        </table>
+        <p><strong>これらに、お客様の音声、文字起こし、メモ、話者の名前、検索語が含まれることはありません。</strong></p>
+        <p>現行バージョンの Murmur に、この取得を停止するアプリ内スイッチはありません。アプリをアンインストールすることで完全に停止できます。</p>
+
+        <h2>Murmur が行う通信</h2>
+        <ul>
+            <li><strong>音声モデルのダウンロード</strong>:初回セットアップ時(および別のモデルを選んだ場合)に、当社の配信ネットワークから音声認識モデルをダウンロードします。これは単なるファイルのダウンロードであり、個人情報は送信されません。</li>
+            <li><strong>分析・クラッシュ情報の送信</strong>:上記の匿名情報が Google Firebase に送信されます。</li>
+        </ul>
+        <p>これ以外に Murmur はネットワーク接続を必要としません。モデルの導入後は、録音と文字起こしは完全にオフラインで動作します。</p>
+
+        <h2>バックアップと同期</h2>
+        <ul>
+            <li><strong>Android</strong>:Android 標準の自動バックアップにより、アプリのデータが<strong>お客様ご自身の</strong> Google ドライブに保存されることがあります。当社はそこにアクセスできません。端末の設定でオフにできます。</li>
+            <li><strong>iOS</strong>:iCloud 同期を有効にすると、録音と文字起こしが<strong>お客様ご自身の</strong>プライベートな iCloud アカウントを通じて端末間で同期されます。当社はそこにアクセスできません。アプリの設定でオフにできます。</li>
         </ul>
 
-        <h2>お客様の情報を利用する目的</h2>
-        <p>当社は、お客様から取得した情報を、以下の目的のために利用します。</p>
-        <ul>
-            <li>当社サービスに関する登録の受付、お客様の本人確認、認証のため</li>
-            <li>お客様の当社サービスの利用履歴を管理するため</li>
-            <li>当社サービスにおけるお客様の行動履歴を分析し、当社サービスの維持改善に役立てるため</li>
-            <li>広告の配信、表示及び効果測定のため</li>
-            <li>お客様の趣味嗜好にあわせたターゲティング広告を表示するため</li>
-            <li>当社のサービスに関するご案内をするため</li>
-            <li>お客様からのお問い合わせに対応するため</li>
-            <li>当社の規約や法令に違反する行為に対応するため</li>
-            <li>当社サービスの変更、提供中止、終了、契約解除をご連絡するため</li>
-            <li>当社規約の変更等を通知するため</li>
-            <li>以上の他、当社サービスの提供、維持、保護及び改善のため</li>
-        </ul>
-
-        <h2>安全管理のために講じた措置</h2>
-        <p>当社は、個人情報を保護するため、情報セキュリティに関する規程に基づき、当該個人情報の管理、個人情報の持ち出し方法の指定、第三者からの不正アクセスの防止等の対策を行い、個人情報の漏洩、紛失、改ざん、破壊等の予防を図ります。</p>
+        <h2>広告・トラッキング</h2>
+        <p>Murmur に<strong>広告は一切ありません</strong>。広告 SDK も、アプリ間・サイト間のトラッキングもありません。当社がお客様のデータをターゲティング広告に利用することはなく、個人情報を販売・貸与することもありません。</p>
 
         <h2>第三者提供</h2>
-        <p>当社は、お客様から取得する情報のうち、個人データ（個人情報保護法第16条第3項）に該当するものついては、あらかじめお客様の同意を得ずに、第三者（日本国外にある者を含みます。）に提供しません。但し、次の場合は除きます。</p>
+        <p>当社は、お客様の個人情報を第三者に提供しません。ただし、上記の匿名の分析・クラッシュ情報は、当社の委託先である Google によって処理されます(<a href="https://firebase.google.com/support/privacy">Firebase のプライバシー情報</a>)。法令により開示が求められる場合を除きます。</p>
+
+        <h2>お子様について</h2>
+        <p>Murmur は子供向けのアプリではなく、当社が子供から意図的に個人情報を取得することはありません。</p>
+
+        <h2>お客様の選択とデータの削除</h2>
         <ul>
-            <li>個人データの取扱いを外部に委託する場合</li>
-            <li>当社や当社サービスが買収された場合</li>
-            <li>事業パートナーと共同利用する場合（具体的な共同利用がある場合は、その内容を別途公表します。）</li>
-            <li>その他、法律によって合法的に第三者提供が許されている場合</li>
+            <li>録音、文字起こし、話者は、いつでもアプリ内から個別に削除できます。</li>
+            <li>アプリをアンインストールすると、端末内の録音・文字起こし等のデータは削除されます。</li>
+            <li>マイクへのアクセスは、端末の設定からいつでも取り消せます。取り消すと Murmur は録音できません。</li>
+            <li>お客様のインストールに紐づく匿名の分析データの削除をご希望の場合は、下記までご連絡ください。対応いたします。</li>
         </ul>
 
-        <h2>アクセス解析ツール</h2>
-        <p>当社は、お客様のアクセス解析のために、「Firebase」を利用しています。Firebaseについて、詳しくは以下からご確認ください。<br>
-        <a href="https://firebase.google.com/support/privacy?hl=ja" target="_blank" style="color: #667eea;">https://firebase.google.com/support/privacy?hl=ja</a></p>
-
-        <h2>広告の配信</h2>
-        <p>当社は、以下のアフィリエイトプログラムに参加しており、以下のアフィリエイト事業者及びそのパートナー（第三者配信事業者）の提供する広告を設置しています。そのため広告事業者がお客様の情報を自動取得する場合があります。詳しくは各社のページをご覧ください。</p>
-        <ul>
-            <li>AdMob（Google Inc.） <a href="https://policies.google.com/technologies/ads" target="_blank" style="color: #667eea;">https://policies.google.com/technologies/ads</a></li>
-        </ul>
-
-        <h2>プライバシーポリシーの変更</h2>
-        <p>本ポリシーの内容は、法令その他本ポリシーに別段の定めのある事項を除いて、通知することなく変更することができるものとします。</p>
-        <p>当社が別途定める場合を除いて、変更後のプライバシーポリシーは本ウェブサイトに掲載したときから効力を生じるものとします。</p>
+        <h2>本ポリシーの変更</h2>
+        <p>本ポリシーを変更した場合は、本ページ冒頭の日付を更新します。将来のバージョンで、内容を端末外へ送信する機能を導入する場合には、その機能がお客様に提供される<strong>前に</strong>、本ポリシーと各ストアのプライバシー開示を更新します。</p>
 
         <h2>お問い合わせ</h2>
-        <p>本プライバシーポリシーに関するお問い合せは下記までご連絡ください。</p>
-        <p><a href="https://forms.gle/HLBmAwocqanbtbnn6" target="_blank" style="color: #667eea;">お問い合わせフォーム</a></p>
+        <p>本ポリシーおよび Murmur のプライバシーに関するお問い合わせ: <a href="mailto:support@shosin-labs.com">support@shosin-labs.com</a></p>
 
-        <p style="margin-top: 3rem;">2025年1月1日制定</p>
+        <hr class="divider">
+
+        <h1 id="english">Privacy Policy</h1>
+        <p class="updated">Last updated: 13 July 2026</p>
+
+        <div class="callout">
+            <p><strong>The short version.</strong> Murmur records and transcribes <strong>on your device</strong>. Your audio recordings and their transcripts are never uploaded to us, and we cannot read them. We collect only anonymous usage statistics and crash reports, which never contain your audio or your words. Murmur has no advertising and no accounts, and we do not sell your personal data.</p>
+        </div>
+
+        <p>This policy explains how Shosin Labs ("we", "us") handles information in connection with our website and the <strong>Murmur</strong> app for iOS and Android.</p>
+
+        <h2>Your recordings and transcripts stay on your device</h2>
+        <p>Murmur is built so that the sensitive material — what you actually said — never reaches us.</p>
+        <ul>
+            <li><strong>Recording.</strong> The microphone is used only while you are actively recording.</li>
+            <li><strong>Transcription.</strong> Speech is converted to text by a speech-recognition model running locally on your device. The audio is not sent to any server.</li>
+            <li><strong>Speaker identification.</strong> Telling speakers apart, and the speaker data Murmur derives in order to recognise the same person across recordings, is computed and stored locally on your device.</li>
+            <li><strong>Translation.</strong> Transcript translation runs on-device.</li>
+            <li><strong>Storage.</strong> Recordings, transcripts, speaker data and your notes are stored in the app's private storage on your device.</li>
+        </ul>
+        <p>We do not receive, store, or have any ability to access your recordings or transcripts.</p>
+
+        <h2>What we do collect</h2>
+        <p>Murmur includes Google Firebase Analytics and Firebase Crashlytics, which collect a limited amount of anonymous, technical information so we can understand how the app is used and fix crashes.</p>
+        <table>
+            <tr><th>What</th><th>Examples</th><th>Why</th></tr>
+            <tr><td>Usage events</td><td>Screens opened; that a recording was started, transcribed, exported or played back; that a setting was changed. Counts and timings only.</td><td>To understand which features are used.</td></tr>
+            <tr><td>App instance identifier</td><td>A random identifier generated by Firebase per installation. It is not your advertising ID, and it is not linked to any account (Murmur has no accounts).</td><td>To count distinct installations.</td></tr>
+            <tr><td>Device and app information</td><td>Device model and manufacturer, OS version, app version, language setting, an approximate memory-size band (e.g. "4-6GB"), and how many speech models are installed.</td><td>To reproduce bugs and decide which devices to support.</td></tr>
+            <tr><td>Crash diagnostics</td><td>Stack traces, and the app's state at the moment of a crash.</td><td>To diagnose and fix crashes.</td></tr>
+        </table>
+        <p><strong>This data never includes your audio, your transcripts, your notes, your speaker names, or your search terms.</strong></p>
+        <p>In the current version of Murmur there is no in-app switch to turn this collection off. You can stop it entirely by uninstalling the app.</p>
+
+        <h2>Network connections Murmur makes</h2>
+        <ul>
+            <li><strong>Speech model download.</strong> On first setup (and if you later choose a different model), Murmur downloads a speech-recognition model from our content delivery network. This request carries no personal data — it is a plain file download.</li>
+            <li><strong>Analytics and crash reporting.</strong> The anonymous data described above is sent to Google Firebase.</li>
+        </ul>
+        <p>Apart from these, Murmur does not need a network connection. Once a model is installed, recording and transcription work fully offline.</p>
+
+        <h2>Backup and sync</h2>
+        <ul>
+            <li><strong>Android.</strong> Murmur's data participates in Android's standard Auto Backup, which copies app data to <em>your own</em> Google Drive account. That backup belongs to you; we have no access to it. You can turn it off in your device's system settings.</li>
+            <li><strong>iOS.</strong> Murmur can optionally sync your recordings and transcripts through <em>your own</em> private iCloud account. The data stays within your iCloud, which we cannot access. It can be turned off in the app's settings.</li>
+        </ul>
+
+        <h2>Advertising and tracking</h2>
+        <p>Murmur contains <strong>no advertising</strong>, no advertising SDKs, and no cross-app or cross-site tracking. We do not use your data for targeted advertising, and we do not sell or rent your personal information.</p>
+
+        <h2>Sharing your information</h2>
+        <p>We do not share your personal information with third parties, except that the anonymous analytics and crash data described above is processed on our behalf by Google as our service provider. See <a href="https://firebase.google.com/support/privacy">Firebase's privacy information</a>. We may disclose information if we are legally required to do so.</p>
+
+        <h2>Children</h2>
+        <p>Murmur is not directed at children, and we do not knowingly collect personal information from children.</p>
+
+        <h2>Your choices and deleting your data</h2>
+        <ul>
+            <li>You can delete any individual recording, transcript, or speaker from within the app at any time.</li>
+            <li>Uninstalling Murmur removes its recordings, transcripts and other data from your device.</li>
+            <li>Microphone access can be revoked at any time in your device's system settings; Murmur cannot record without it.</li>
+            <li>If you would like us to delete the anonymous analytics data associated with your app installation, contact us at the address below and we will do so.</li>
+        </ul>
+
+        <h2>Changes to this policy</h2>
+        <p>If we change this policy we will update the date at the top of this page. If a future version of Murmur introduces a feature that sends any content off your device, we will update this policy and the app's store privacy disclosures <strong>before</strong> that feature becomes available to you.</p>
+
+        <h2>Contact</h2>
+        <p>Questions about this policy or about privacy in Murmur: <a href="mailto:support@shosin-labs.com">support@shosin-labs.com</a></p>
+
+        <p><a href="index.html">ホームに戻る / Back to home</a></p>
     </div>
 
     <footer>
-        <p><a href="index.html">ホームに戻る</a></p>
-        <p style="margin-top: 0.5rem;">&copy; 2025 Shosin Labs. All rights reserved.</p>
+        <p>&copy; 2026 Shosin Labs. All rights reserved.</p>
     </footer>
 </body>
 </html>
