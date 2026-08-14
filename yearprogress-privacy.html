@@ -117,7 +117,7 @@
 
         <h2>広告・トラッキング</h2>
         <p>アプリに<strong>広告は一切ありません</strong>。広告 SDK も、アプリ内課金も、サブスクリプションもありません。当社がお客様のデータをターゲティング広告に利用することはなく、個人情報を販売・貸与することもありません。</p>
-        <p>広告 ID について、正確に記載します。<strong>Android 版</strong>では、Google Analytics のライブラリが広告 ID 関連の権限(com.google.android.gms.permission.AD_ID ほか)をアプリに追加するため、Google Analytics が Android の広告 ID を取得しうる状態にあります。当社がその値を参照すること、広告に利用すること、他社と結合することはありません。<strong>iOS 版</strong>では、アプリがトラッキングの許可(App Tracking Transparency)を求めることが一切ないため、広告 ID(IDFA)はアプリから利用できません。</p>
+        <p><strong>広告 ID を取得することはありません。</strong> <strong>Android 版</strong>では、Google の分析ライブラリが本来アプリに追加する広告 ID 関連の権限(com.google.android.gms.permission.AD_ID、android.permission.ACCESS_ADSERVICES_AD_ID、android.permission.ACCESS_ADSERVICES_ATTRIBUTION)を、アプリのマニフェストから明示的に削除しています。さらに、ビルドが完成したアプリのマニフェストを読み返し、この3つのいずれかが残っていればビルドを失敗させます。将来いずれかの依存ライブラリがこれらを再び持ち込んだとしても、気づかれないまま出荷されることはありません。<strong>iOS 版</strong>では、アプリがトラッキングの許可(App Tracking Transparency)を求めることが一切ないため、広告 ID(IDFA)はアプリから利用できません。</p>
 
         <h2>第三者提供</h2>
         <p>当社は、お客様の個人情報を第三者に提供しません。ただし、上記の匿名の利用状況は、当社の委託先である Google によって処理されます(<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase のプライバシー情報</a>)。法令により開示が求められる場合を除きます。</p>
@@ -220,7 +220,7 @@
 
         <h2>Advertising and tracking</h2>
         <p>The app has <strong>no advertising</strong>. There are no ad SDKs, no in-app purchases and no subscriptions. We do not use your data for targeted advertising, and we do not sell or rent personal information.</p>
-        <p>To be precise about the advertising ID: <strong>on Android</strong>, Google's Analytics library adds the advertising-ID permissions (com.google.android.gms.permission.AD_ID and related) to the app, so Google Analytics is in a position to read the Android advertising ID. We never look at that value, never use it for advertising, and never combine it with anything else. <strong>On iOS</strong>, the app never asks for App Tracking Transparency permission, so the advertising identifier (IDFA) is not available to it.</p>
+        <p><strong>We do not collect the advertising ID.</strong> <strong>On Android</strong>, the advertising-ID permissions that Google's analytics library would otherwise add to the app (com.google.android.gms.permission.AD_ID, android.permission.ACCESS_ADSERVICES_AD_ID and android.permission.ACCESS_ADSERVICES_ATTRIBUTION) are explicitly removed from the app's manifest. The build then reads the finished app's manifest back and fails if any of the three has survived, so a dependency that reintroduces one cannot ship unnoticed. <strong>On iOS</strong>, the app never asks for App Tracking Transparency permission, so the advertising identifier (IDFA) is not available to it.</p>
 
         <h2>Sharing your information</h2>
         <p>We do not share your personal information with third parties. The anonymous usage information above is processed by Google as our processor (<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase privacy information</a>). We may disclose information where required by law.</p>
@@ -323,7 +323,7 @@
 
         <h2>广告与追踪</h2>
         <p>应用中<strong>没有任何广告</strong>，没有广告 SDK，没有内购，也没有订阅。我们不会将你的数据用于定向广告，也不会出售或出租个人信息。</p>
-        <p>关于广告 ID，这里如实说明：在 <strong>Android 版</strong>中，Google 的分析库会向应用添加广告 ID 相关权限（com.google.android.gms.permission.AD_ID 等），因此 Google Analytics 处于可以读取 Android 广告 ID 的状态。我们不会查看该值，不会将其用于广告，也不会将其与任何其他信息关联。在 <strong>iOS 版</strong>中，应用从不申请追踪许可（App Tracking Transparency），因此应用无法获取广告标识符（IDFA）。</p>
+        <p><strong>我们不收集广告 ID。</strong> 在 <strong>Android 版</strong>中，Google 的分析库本来会向应用添加的广告 ID 相关权限（com.google.android.gms.permission.AD_ID、android.permission.ACCESS_ADSERVICES_AD_ID、android.permission.ACCESS_ADSERVICES_ATTRIBUTION）已从应用清单中显式移除。构建过程还会回读成品应用的清单，只要这三者中还有任何一个存在就让构建失败；因此即使日后某个依赖把它们带回来，也不会在无人察觉的情况下发布出去。在 <strong>iOS 版</strong>中，应用从不申请追踪许可（App Tracking Transparency），因此应用无法获取广告标识符（IDFA）。</p>
 
         <h2>信息的对外提供</h2>
         <p>我们不会向第三方提供你的个人信息。上述匿名使用信息由我们的受托方 Google 处理（<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase 隐私说明</a>）。法律要求披露的情形除外。</p>
