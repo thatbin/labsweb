@@ -49,7 +49,7 @@
         <p>本ポリシーは、Shosin Labs（以下「当社」）が iOS 向け <strong>bMusic</strong> に関連して情報をどのように取り扱うかを説明するものです。</p>
 
         <h2>あなたの音楽は端末の中にあります</h2>
-        <p>取り込んだ音楽ファイル、アートワーク、プレイリスト、コレクション、再生回数、年ごとの再生レポートは、すべて端末内のアプリ専用領域（ウィジェットと共有する App Group を含む）に保存されます。<strong>音声ファイルそのものが当社のサーバーに送られることはありません。</strong></p>
+        <p>取り込んだ音楽ファイル、アートワーク、プレイリスト、タグ、再生回数、年ごとの再生レポートは、すべて端末内のアプリ専用領域（ウィジェットと共有する App Group を含む）に保存されます。<strong>音声ファイルそのものが当社のサーバーに送られることはありません。</strong></p>
         <p>iCloud 同期をオンにした場合、曲・音声ファイル・アートワーク・プレイリスト・再生回数は<strong>お客様ご自身の iCloud プライベートデータベース</strong>を通じてお客様の端末間で同期します。これは Apple とお客様の間のもので、当社はその内容を参照できません。</p>
 
         <h2>当社が取得する情報</h2>
@@ -58,7 +58,7 @@
             <tr><th>種類</th><th>例</th><th>目的</th></tr>
             <tr>
                 <td>利用イベント</td>
-                <td>アプリの起動、タブの切り替え、画面の表示、再生の開始・一時停止・スキップ、キューの操作、プレイリストやコレクションの作成・編集、取り込み、タグ編集、アートワーク検索、設定の変更、購入画面の表示</td>
+                <td>アプリの起動、タブの切り替え、画面の表示、再生の開始・一時停止・スキップ、キューの操作、プレイリストやタグの作成・編集、取り込み、タグ編集、アートワーク検索、設定の変更、購入画面の表示</td>
                 <td>どの機能が使われているかの把握</td>
             </tr>
             <tr>
@@ -91,7 +91,7 @@
             <li>上記の利用状況情報を Google Firebase に送信します。</li>
             <li><strong>アートワーク・楽曲情報の検索。</strong>「アートワークを検索」「情報を検索」を実行したとき、対象のアルバム名・アーティスト名・曲名を Apple の iTunes 検索 API に送信します。</li>
             <li><strong>Last.fm への Scrobble（任意）。</strong>お客様ご自身の API キーを設定した場合にのみ、再生した曲名・アーティスト名・アルバム名を Last.fm に送信します。設定しなければ通信は発生しません。</li>
-            <li><strong>お客様が指定した取り込み元。</strong>URL からの取り込み、Wi-Fi 転送、クラウドドライブからの取り込みは、お客様が指定した相手先とのみ通信します。Wi-Fi 転送はお客様のローカルネットワーク内で完結します。</li>
+            <li><strong>お客様が指定した取り込み元。</strong>URL からの取り込み、Wi-Fi 転送、クラウドドライブからの取り込みは、お客様が指定した相手先とのみ通信します。ファイル自体はお客様のローカルネットワーク内だけを通ります。ペアリングのときだけ、パソコンとつなぐために端末のローカル IP アドレスと端末名を当社の中継サーバーに送ります。一度きりの用途で、10 分後に削除されます。</li>
         </ul>
         <p>これ以外の通信は行いません。再生、ライブラリ管理、歌詞の文字起こし（端末内で処理されます）はオフラインで動作します。</p>
 
@@ -109,7 +109,7 @@
 
         <h2>お客様の選択とデータの削除</h2>
         <ul>
-            <li>曲、プレイリスト、コレクションはアプリ内でいつでも削除できます。設定から資料庫全体をリセットすることもできます。</li>
+            <li>曲、プレイリスト、タグはアプリ内でいつでも削除できます。設定から資料庫全体をリセットすることもできます。</li>
             <li>アプリを削除すると、端末上のデータと利用状況の送信は停止します。iCloud 同期を使っていた場合、iCloud 上のデータは Apple の設定から削除できます。</li>
             <li>お客様のインストールに紐づく利用状況データの削除をご希望の場合は、下記までご連絡ください。対応いたします。</li>
         </ul>
@@ -133,7 +133,7 @@
         <p>This policy explains how Shosin Labs ("we", "us") handles information in connection with <strong>bMusic</strong> for iOS.</p>
 
         <h2>Your music stays on your device</h2>
-        <p>The audio files you import, their artwork, your playlists, collections, play counts and yearly listening reports are all stored in the app's private storage on your device (including an App Group shared with the Home Screen widget). <strong>The audio files themselves are never sent to our servers.</strong></p>
+        <p>The audio files you import, their artwork, your playlists, tags, play counts and yearly listening reports are all stored in the app's private storage on your device (including an App Group shared with the Home Screen widget). <strong>The audio files themselves are never sent to our servers.</strong></p>
         <p>If you turn on iCloud sync, your songs, audio files, artwork, playlists and play counts sync between your own devices through <strong>your own iCloud private database</strong>. That is between you and Apple; we cannot read any of it.</p>
 
         <h2>What we do collect</h2>
@@ -142,7 +142,7 @@
             <tr><th>What</th><th>Examples</th><th>Why</th></tr>
             <tr>
                 <td>Usage events</td>
-                <td>App launches, tab switches, screens opened, playback started / paused / skipped, queue changes, playlists and collections created or edited, imports, tag edits, artwork lookups, settings changes, the paywall being shown</td>
+                <td>App launches, tab switches, screens opened, playback started / paused / skipped, queue changes, playlists and tags created or edited, imports, tag edits, artwork lookups, settings changes, the paywall being shown</td>
                 <td>Understanding which features are used</td>
             </tr>
             <tr>
@@ -175,7 +175,7 @@
             <li>Sending the usage information above to Google Firebase.</li>
             <li><strong>Artwork and song-info lookup.</strong> When you run "Find Artwork" or "Find Info", the album, artist and song name concerned are sent to Apple's iTunes Search API.</li>
             <li><strong>Last.fm scrobbling (optional).</strong> Only if you configure your own Last.fm API key, the title, artist and album of what you play are sent to Last.fm. Leave it unconfigured and no such request is made.</li>
-            <li><strong>Import sources you choose.</strong> Import from a URL, Wi-Fi transfer and cloud-drive import talk only to the destination you named. Wi-Fi transfer stays inside your own local network.</li>
+            <li><strong>Import sources you choose.</strong> Import from a URL, Wi-Fi transfer and cloud-drive import talk only to the destination you named. The files themselves only ever travel across your own local network. Pairing is the one exception: to connect the two, your device's local IP address and device name are sent to our relay. They are single use and deleted after ten minutes.</li>
         </ul>
         <p>The app makes no other network connections. Playback, library management and on-device lyric transcription all work offline.</p>
 
@@ -193,7 +193,7 @@
 
         <h2>Your choices and deleting your data</h2>
         <ul>
-            <li>Songs, playlists and collections can be deleted from inside the app at any time, and the whole library can be reset from Settings.</li>
+            <li>Songs, playlists and tags can be deleted from inside the app at any time, and the whole library can be reset from Settings.</li>
             <li>Uninstalling the app deletes the data held on your device and stops the usage reporting. If you used iCloud sync, the copy in iCloud can be removed from your Apple account settings.</li>
             <li>If you would like the usage data tied to your installation deleted, contact us below and we will take care of it.</li>
         </ul>
@@ -216,7 +216,7 @@
         <p>本政策说明 Shosin Labs（下称"我们"）在 iOS 版 <strong>bMusic</strong> 中如何处理信息。</p>
 
         <h2>你的音乐留在设备上</h2>
-        <p>你导入的音频文件、封面、播放列表、合集、播放次数和年度收听报告，全部保存在设备上应用的专属存储中（包括与主屏幕小组件共享的 App Group）。<strong>音频文件本身不会发送到我们的服务器。</strong></p>
+        <p>你导入的音频文件、封面、播放列表、标签、播放次数和年度收听报告，全部保存在设备上应用的专属存储中（包括与主屏幕小组件共享的 App Group）。<strong>音频文件本身不会发送到我们的服务器。</strong></p>
         <p>如果你打开 iCloud 同步，歌曲、音频文件、封面、播放列表和播放次数会通过<strong>你自己的 iCloud 私有数据库</strong>在你自己的设备之间同步。这发生在你和 Apple 之间，我们无法读取其中的内容。</p>
 
         <h2>我们收集的信息</h2>
@@ -225,7 +225,7 @@
             <tr><th>类型</th><th>示例</th><th>用途</th></tr>
             <tr>
                 <td>使用事件</td>
-                <td>启动应用、切换标签、打开页面、开始／暂停／切换播放、待播清单操作、创建或编辑播放列表与合集、导入、编辑标签、查找封面、修改设置、显示购买页</td>
+                <td>启动应用、切换标签、打开页面、开始／暂停／切换播放、待播清单操作、创建或编辑播放列表与标签、导入、编辑标签、查找封面、修改设置、显示购买页</td>
                 <td>了解哪些功能被使用</td>
             </tr>
             <tr>
@@ -258,7 +258,7 @@
             <li>把上述使用信息发送到 Google Firebase。</li>
             <li><strong>查找封面与歌曲信息。</strong>当你使用"查找封面"或"查找信息"时，相关的专辑名、艺人名和曲名会发送到 Apple 的 iTunes 搜索接口。</li>
             <li><strong>Last.fm 记录（可选）。</strong>只有在你配置了自己的 Last.fm API 密钥后，播放的曲名、艺人和专辑才会发送到 Last.fm。不配置则不会发生该请求。</li>
-            <li><strong>你自己指定的导入来源。</strong>从链接导入、Wi-Fi 传输和云盘导入只与你指定的目标通信。Wi-Fi 传输在你自己的局域网内完成。</li>
+            <li><strong>你自己指定的导入来源。</strong>从链接导入、Wi-Fi 传输和云盘导入只与你指定的目标通信。文件本身只在你自己的局域网内传输。只有配对这一步例外：为了把两边连上，会把设备的局域网 IP 地址和设备名发到我们的中转服务器，一次性使用，10 分钟后删除。</li>
         </ul>
         <p>除此之外应用不发起其他网络连接。播放、曲库管理和设备端歌词转写都可离线工作。</p>
 
@@ -276,7 +276,7 @@
 
         <h2>你的选择与数据删除</h2>
         <ul>
-            <li>歌曲、播放列表和合集可以随时在应用内删除，也可以在设置中重置整个资料库。</li>
+            <li>歌曲、播放列表和标签可以随时在应用内删除，也可以在设置中重置整个资料库。</li>
             <li>卸载应用会删除设备上保存的数据并停止使用统计。如果你使用过 iCloud 同步，iCloud 中的副本可在你的 Apple 账户设置中删除。</li>
             <li>如果你希望删除与你的安装关联的使用数据，请通过下方方式联系我们，我们会处理。</li>
         </ul>
