@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bDiet プライバシーポリシー - Shosin Labs</title>
+    <!-- thatbin/bDiet の docs/privacy.md から生成。このファイルを直接編集しない。 -->
+    <meta name="bdiet-source" content="docs/privacy.md">
+    <meta name="bdiet-source-sha256" content="a4db6f5b5a93b1a39571a629d459c1bf023452078612b14434b32c4babd672d0">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.8; color: #333; }
+        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem 0; }
+        nav { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .logo { font-size: 1.5rem; font-weight: bold; }
+        .logo a { color: white; text-decoration: none; }
+        .container { max-width: 800px; margin: 0 auto; padding: 3rem 20px; }
+        h1 { font-size: 2.2rem; margin-bottom: 0.5rem; color: #2d3748; }
+        h2 { font-size: 1.4rem; margin-top: 2rem; margin-bottom: 1rem; color: #667eea; }
+        h3 { font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #2d3748; }
+        p { margin-bottom: 1rem; }
+        ul { margin-left: 1.5rem; margin-bottom: 1rem; }
+        ul li { margin-bottom: 0.5rem; }
+        a { color: #667eea; }
+        hr { border: 0; border-top: 2px solid #e2e8f0; margin: 3.5rem 0; }
+        footer { background: #1a202c; color: white; text-align: center; padding: 2rem 20px; margin-top: 3rem; }
+        footer a { color: #667eea; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">Shosin Labs</a></div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>bDiet プライバシーポリシー</h1>
+        <p>最終更新: 2026-08-30</p>
+        <p><a href="#english">English ↓</a></p>
+        <h2>要約</h2>
+        <p><strong>記録したものは、既定では端末から出ません。</strong> 食事・体重・水分・断食の記録は
+        すべて端末内のデータベースに保存され、あなたが同期または投稿を選ばない限り
+        送信されません。アプリは機内モードでも通常どおり使えます。</p>
+        <h2>端末内にのみ保存されるもの</h2>
+        <ul>
+        <li>食事の記録（食品、量、時刻、区分）</li>
+        <li>体重・体脂肪率</li>
+        <li>水分の記録</li>
+        <li>軽断食のセッション</li>
+        <li>手入力した運動の記録</li>
+        <li>プロフィール（性別、生まれた年、身長、目標体重と期日）</li>
+        </ul>
+        <p>これらは端末のファイル保護（初回アンロック後）の下に置かれ、
+        iCloud バックアップの対象になります。機種変更のときに記録を引き継げるようにするためです。</p>
+        <p><strong>ヘルスケア（HealthKit）から読み取った健康データは、この保存先には一切書き込みません。</strong>
+        したがって iCloud バックアップにも含まれません。詳しくは次の節を参照してください。</p>
+        <h2>ヘルスケア（HealthKit）</h2>
+        <p>許可した場合にのみ、当日の<strong>アクティブエネルギー</strong>と<strong>歩数</strong>を読み取ります。
+        読み取った値は<strong>保存しません</strong>。画面を開くたびにヘルスケアから読み直し、
+        その日の消費カロリーの表示に使うだけで、アプリのデータベースにも外部にも書きません。
+        アプリを閉じれば値はメモリごと消えます。</p>
+        <p>記録した体重は、許可した場合にのみヘルスケアへ書き戻します。</p>
+        <p><strong>ヘルスケアから読み取ったデータを広告・マーケティングに利用することはありません。</strong>
+        第三者へ提供することもありません。</p>
+        <h2>送信されるもの</h2>
+        <h3>アカウントを作成した場合</h3>
+        <p>Sign in with Apple を使った場合のみ、Apple から受け取る識別子（<code>sub</code>）を
+        <strong>ハッシュ化した値</strong>をサーバに保存します。元の識別子には戻せません。
+        メールアドレスは受け取っても保存しません。</p>
+        <h3>同期を有効にした場合</h3>
+        <p>端末内のデータベースをそのまま暗号化ストレージに預けます。目的は機種変更と
+        復旧のみで、内容の解析はしません。スナップショットは 90 日で自動的に削除されます。
+        前述のとおり、この中にヘルスケア由来のデータは含まれません。</p>
+        <h3>広場に投稿した場合</h3>
+        <p>投稿した本文は公開されます。BMI は<strong>投稿ごとにあなたが表示を選んだ場合にのみ</strong>
+        付与され、表示しない選択をした投稿では値そのものを保存しません。
+        投稿は自分で削除できます。通報された投稿は運営が削除することがあります。</p>
+        <h3>写真から推定した場合</h3>
+        <p>写真からの推定にはアカウントが必要です。推定のために送った写真は
+        Amazon Bedrock の日本国内向け推論プロファイル（<code>jp.</code>）で処理します。
+        <strong>写真が日本国内から出ることはありません。</strong> ただし国内のどのリージョンが処理するかは
+        AWS が選ぶため、当方で指定はできません。当方は写真を保存せず、
+        推論の記録（invocation logging）も有効にしていません。
+        Amazon Bedrock が入力と出力をモデルの学習に使用しないことは AWS が定めています。</p>
+        <h2>保存しないもの</h2>
+        <ul>
+        <li>氏名、メールアドレス、電話番号</li>
+        <li>位置情報</li>
+        <li>連絡先、写真ライブラリの内容（あなたが推定のために選んだ画像を除く）</li>
+        <li>広告識別子（IDFA）。広告ネットワークや解析 SDK を組み込んでいません。</li>
+        <li>追跡（トラッキング）は行いません。他社のアプリやサイトでの行動と結び付けることもしません。</li>
+        </ul>
+        <h2>第三者提供</h2>
+        <p>行いません。データを販売・貸与・共有しません。</p>
+        <h2>削除</h2>
+        <p>アプリを削除すると端末内のデータはすべて消えます。アカウントを作成していた場合は、
+        マイページの「アカウントを削除」からサーバ上のデータも削除できます。
+        ユーザー行、同期スナップショット、および<strong>あなたが作った</strong>広場の投稿・いいね・
+        通報・ブロックの記録が削除され、発行済みのセッションもその場で無効になります。
+        他の利用者があなたについて作った記録 —— 誰かがあなたをブロックした記録と、
+        あなたの投稿に対して出された通報 —— は、ハッシュ化した ID だけの形で残ります。
+        あなたが書いた本文は残りません。削除は取り消せません。</p>
+        <h2>未成年の方へ</h2>
+        <p>体重や摂取カロリーの管理は、成長期には健康を損なう可能性があります。
+        このアプリは 1 日の摂取目標が 1200 kcal を下回らないよう設計されていますが、
+        未成年の方は保護者や医療者と相談のうえでご利用ください。</p>
+        <h2>摂食障害についてのお願い</h2>
+        <p>このアプリは体重管理を支援しますが、医療機器でも医療サービスでもありません。
+        食事や体重に強い不安を感じている場合は、記録を続けるよりも専門家への相談を
+        おすすめします。</p>
+        <h2>お問い合わせ</h2>
+        <p><a href="mailto:support@shosin-labs.com">support@shosin-labs.com</a></p>
+        <p><a href="bdiet-terms.html">利用規約</a> / <a href="bdiet-support.html">サポート</a></p>
+        <hr />
+        <h1 id="english">bDiet — Privacy Policy</h1>
+        <p>Last updated: 2026-08-30</p>
+        <h2>In short</h2>
+        <p><strong>What you log stays on your device by default.</strong> Meals, weight, water and
+        fasting sessions are written to a database on the phone and are not sent
+        anywhere unless you turn on sync or post to the community feed. The app works
+        in airplane mode.</p>
+        <h2>Stored only on your device</h2>
+        <ul>
+        <li>Meal entries (food, amount, time, meal type)</li>
+        <li>Weight and body fat percentage</li>
+        <li>Water intake</li>
+        <li>Fasting sessions</li>
+        <li>Exercise you entered by hand</li>
+        <li>Your profile (sex, birth year, height, goal weight and target date)</li>
+        </ul>
+        <p>These live under iOS file protection (after first unlock) and are included in
+        your iCloud backup, so that your records survive moving to a new phone.</p>
+        <p><strong>Health data read from HealthKit is never written to that database</strong>, and is
+        therefore never part of the backup. See the next section.</p>
+        <h2>HealthKit</h2>
+        <p>With your permission, the app reads today's <strong>active energy</strong> and <strong>step count</strong>.
+        Those values are <strong>not stored</strong>. They are read again from HealthKit each time
+        the screen opens, used only to display how much you have burned today, and are
+        never written to the app's database or sent anywhere. They disappear from memory
+        when the app closes.</p>
+        <p>Weight you record is written back to HealthKit only if you allow it.</p>
+        <p><strong>Data read from HealthKit is never used for advertising or marketing</strong>, and is
+        never disclosed to third parties.</p>
+        <h2>What does leave the device</h2>
+        <h3>If you create an account</h3>
+        <p>Only if you use Sign in with Apple: we store a <strong>hash</strong> of the identifier
+        (<code>sub</code>) Apple gives us. It cannot be reversed. If Apple sends an email address,
+        we do not store it.</p>
+        <h3>If you enable sync</h3>
+        <p>Your device database is uploaded to encrypted storage as-is, solely so that you
+        can move to a new phone or recover after a loss. We do not analyze its contents.
+        Snapshots are deleted automatically after 90 days. As stated above, nothing
+        derived from HealthKit is in them.</p>
+        <h3>If you post to the community feed</h3>
+        <p>The text you post becomes public. Your BMI is attached <strong>only when you choose to
+        show it on that particular post</strong>; when you choose not to, the value is not
+        stored at all. You can delete your own posts. Reported posts may be removed by us.</p>
+        <h3>If you use photo estimation</h3>
+        <p>Photo estimation requires an account. Photos you send for estimation are
+        processed by Amazon Bedrock through its Japan inference profile (<code>jp.</code>).
+        <strong>They never leave Japan.</strong> Which Japanese region serves a given request is
+        chosen by AWS, not by us. We do not store the photo and we have not enabled
+        Bedrock invocation logging. AWS states that Bedrock does not use inputs or
+        outputs to train its models.</p>
+        <h2>What we never collect</h2>
+        <ul>
+        <li>Name, email address, phone number</li>
+        <li>Location</li>
+        <li>Contacts, or your photo library (other than an image you pick for estimation)</li>
+        <li>Advertising identifiers (IDFA). There is no ad network and no analytics SDK.</li>
+        <li>We do not track you, and we do not link your activity to other apps or sites.</li>
+        </ul>
+        <h2>Third parties</h2>
+        <p>We do not sell, rent or share your data.</p>
+        <h2>Deletion</h2>
+        <p>Deleting the app removes everything stored on the device. If you created an
+        account, "Delete Account" in the profile tab also deletes the server side: your
+        user record, sync snapshots, and the feed posts, likes, reports and blocks <strong>you
+        created</strong>. Records other people created about you — someone else's block naming
+        you, a report filed against one of your posts — remain as hashed identifiers,
+        with none of your text. Existing sessions are invalidated immediately. Deletion
+        cannot be undone.</p>
+        <h2>If you are a minor</h2>
+        <p>Restricting weight and calories can be harmful while you are still growing. The
+        app never sets a daily target below 1200 kcal, but please use it together with a
+        parent or a clinician.</p>
+        <h2>A note on eating disorders</h2>
+        <p>This app supports weight management. It is not a medical device and not a
+        medical service. If food or weight causes you serious anxiety, please talk to a
+        professional rather than keep logging.</p>
+        <h2>Contact</h2>
+        <p><a href="mailto:support@shosin-labs.com">support@shosin-labs.com</a></p>
+        <p><a href="bdiet-terms.html">Terms of Use</a> / <a href="bdiet-support.html">Support</a></p>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Shosin Labs. All rights reserved.</p>
+    </footer>
+</body>
+</html>
